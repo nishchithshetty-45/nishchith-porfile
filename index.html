@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nishchith U Shetty — GTM Systems</title>
+  <meta name="description" content="Nishchith U Shetty builds automated GTM engines that generate 1,500+ qualified leads per quarter — multi-channel outreach systems that run without manual work." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nishchith U Shetty — GTM Systems" />
+  <meta property="og:description" content="I build the machines that make outreach feel effortless. 50,000+ messages a month, fully automated." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/profile.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nishchith U Shetty — GTM Systems" />
+  <meta name="twitter:description" content="Automated GTM engines, multi-channel outreach, zero manual work." />
+  <meta name="twitter:image" content="images/profile.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23d44a7a'/%3E%3Ctext x='50' y='68' font-size='55' font-family='Georgia,serif' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #08080c;
+      --bg2: #0e0e14;
+      --card: #111118;
+      --card2: #16161f;
+      --glass: rgba(13,13,20,0.7);
+      --border: rgba(255,255,255,0.06);
+      --border2: rgba(255,255,255,0.1);
+      --text: #f0f0f5;
+      --text2: #8585a0;
+      --text3: #50506a;
+      --accent: #d44a7a;
+      --accent2: #e8805a;
+      --accent3: #f5a040;
+      --green: #4ade80;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── BACKGROUND ── */
+    .bg-grid {
+      position: fixed; inset: 0;
+      background-image:
+        linear-gradient(rgba(220,150,180,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(220,150,180,0.018) 1px, transparent 1px);
+      background-size: 56px 56px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb {
+      position: fixed; border-radius: 50%; filter: blur(140px);
+      pointer-events: none; z-index: 0;
+    }
+    .orb-1 { width: 600px; height: 600px; background: rgba(212,74,122,0.07); top: -200px; left: -150px; }
+    .orb-2 { width: 500px; height: 500px; background: rgba(232,128,90,0.06); bottom: -150px; right: -100px; }
+    .orb-3 { width: 300px; height: 300px; background: rgba(80,60,180,0.05); top: 40%; left: 60%; }
+
+    .grain {
+      position: fixed; inset: -50%; width: 200%; height: 200%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.04; pointer-events: none; z-index: 1;
+      animation: grain 0.4s steps(1) infinite;
+    }
+    @keyframes grain {
+      0%{transform:translate(0,0)} 25%{transform:translate(-2%,-1%)} 50%{transform:translate(1%,2%)} 75%{transform:translate(-1%,1%)} 100%{transform:translate(2%,-2%)}
+    }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+
+    hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 80px 0 60px;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 420px; gap: 64px; align-items: center;
+    }
+    .hero-text .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.2);
+      color: var(--green); padding: 6px 16px; border-radius: 50px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; margin-bottom: 28px;
+    }
+    .badge-dot {
+      width: 7px; height: 7px; background: var(--green);
+      border-radius: 50%; box-shadow: 0 0 8px var(--green);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    .hero-text h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
+      font-weight: 700; line-height: 1.05;
+      letter-spacing: -0.025em; margin-bottom: 10px;
+    }
+    .hero-text h1 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-tagline {
+      font-size: 0.85rem; font-weight: 600; color: var(--accent2);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .hero-narrative {
+      font-size: 1rem; line-height: 1.8; color: var(--text2);
+      max-width: 460px; margin-bottom: 36px;
+    }
+    .hero-narrative strong { color: var(--text); font-weight: 600; }
+    .hero-narrative em {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-size: 1.05em;
+      color: var(--accent);
+    }
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 28px; border-radius: 50px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 60%, var(--accent3) 100%);
+      color: #fff; text-decoration: none;
+      font-size: 0.88rem; font-weight: 700;
+      transition: all 0.3s; box-shadow: 0 4px 24px rgba(212,74,122,0.35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(212,74,122,0.5); }
+    .btn-primary svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2; }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 24px; border-radius: 50px;
+      border: 1px solid var(--border2); color: var(--text2);
+      text-decoration: none; font-size: 0.88rem; font-weight: 600;
+      transition: all 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--text); }
+
+    /* Photo side */
+    .hero-photo-wrap { position: relative; }
+    .hero-photo-frame {
+      border-radius: 20px; overflow: hidden;
+      border: 1px solid var(--border2);
+      position: relative;
+      background: var(--card);
+    }
+    .hero-photo-frame img {
+      width: 100%; height: 500px; object-fit: cover; object-position: 65% 75%;
+      display: block; filter: grayscale(20%) contrast(1.08) brightness(0.95);
+    }
+    .hero-photo-frame::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to right, var(--bg) 0%, transparent 25%);
+      pointer-events: none;
+    }
+    .hero-photo-frame::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background: radial-gradient(ellipse at 30% 20%, rgba(0,0,0,0.2) 0%, transparent 60%),
+                  radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.4) 100%);
+      pointer-events: none;
+    }
+    .photo-label {
+      position: absolute; bottom: 16px; left: 16px; z-index: 2;
+      background: var(--glass); backdrop-filter: blur(16px);
+      border: 1px solid var(--border2); border-radius: 10px;
+      padding: 8px 14px;
+    }
+    .photo-label .pl-name { font-size: 0.82rem; font-weight: 700; color: var(--text); }
+    .photo-label .pl-role { font-size: 0.7rem; color: var(--accent2); margin-top: 2px; }
+
+    /* ── SECTION BASE ── */
+    section { padding: 80px 0; }
+    .section-label {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.14em; color: var(--accent2); margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700; line-height: 1.1;
+      letter-spacing: -0.02em; margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 1rem; line-height: 1.75; color: var(--text2);
+      max-width: 520px; margin-bottom: 48px;
+    }
+    .section-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem; font-weight: 700;
+      color: rgba(255,255,255,0.03);
+      line-height: 1; margin-bottom: -20px;
+      letter-spacing: -0.04em;
+    }
+
+    /* ── THE SHIFT (narrative) ── */
+    .shift-section { background: var(--bg2); }
+    .shift-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .shift-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-style: italic; line-height: 1.5;
+      color: var(--text2); border-left: 2px solid var(--accent);
+      padding-left: 28px; margin-bottom: 28px;
+    }
+    .shift-quote span {
+      display: block; font-size: 0.75rem; font-style: normal;
+      font-family: 'Inter', sans-serif; color: var(--text3);
+      margin-top: 12px; letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .shift-right p {
+      font-size: 0.95rem; line-height: 1.85; color: var(--text2);
+      margin-bottom: 16px;
+    }
+    .shift-right p strong { color: var(--text); font-weight: 600; }
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(212,74,122,0.08), rgba(232,128,90,0.05));
+      border: 1px solid rgba(212,74,122,0.15);
+      border-radius: 14px; padding: 20px 24px;
+      margin-top: 24px;
+    }
+    .highlight-box .hb-label {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--accent2); margin-bottom: 8px;
+    }
+    .highlight-box .hb-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem; font-style: italic; color: var(--text); line-height: 1.5;
+    }
+
+    /* ── THE ENGINE (pipeline visualization) ── */
+    .engine-section {}
+    .pipeline {
+      display: flex; align-items: stretch; gap: 0;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 20px; overflow: hidden;
+      margin-bottom: 48px;
+    }
+    .pipe-stage {
+      flex: 1; padding: 28px 20px; text-align: center;
+      border-right: 1px solid var(--border); position: relative;
+    }
+    .pipe-stage:last-child { border-right: none; }
+    .pipe-icon {
+      font-size: 1.6rem; margin-bottom: 12px;
+    }
+    .pipe-stage-name {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--text3); margin-bottom: 6px;
+    }
+    .pipe-stage-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem; font-weight: 700; color: var(--text);
+      margin-bottom: 4px;
+    }
+    .pipe-stage-sub {
+      font-size: 0.7rem; color: var(--text3);
+    }
+    .pipe-arrow {
+      position: absolute; right: -8px; top: 50%; transform: translateY(-50%);
+      z-index: 2; color: var(--accent); font-size: 0.9rem;
+      background: var(--card); padding: 4px 2px;
+    }
+
+    /* engine metrics */
+    .engine-metrics {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    }
+    .eng-metric {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px;
+    }
+    .eng-metric .em-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem; font-weight: 700; line-height: 1;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 6px;
+    }
+    .eng-metric .em-desc {
+      font-size: 0.8rem; color: var(--text3); line-height: 1.5;
+    }
+    .eng-metric .em-tag {
+      display: inline-block; margin-top: 10px;
+      background: rgba(212,74,122,0.08); border: 1px solid rgba(212,74,122,0.15);
+      color: var(--accent); font-size: 0.65rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 3px 10px; border-radius: 50px;
+    }
+
+    /* ── CASE STUDIES ── */
+    .cases-section { background: var(--bg2); }
+    .case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .case-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 20px; padding: 32px;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .case-card:hover { border-color: rgba(212,74,122,0.25); transform: translateY(-3px); }
+    .case-eyebrow {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--accent2); margin-bottom: 12px;
+    }
+    .case-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700; color: var(--text);
+      margin-bottom: 14px; line-height: 1.25;
+    }
+    .case-body {
+      font-size: 0.88rem; color: var(--text2); line-height: 1.75;
+      margin-bottom: 24px;
+    }
+    .case-stats { display: flex; flex-wrap: wrap; gap: 12px; }
+    .case-stat {
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+      border-radius: 10px; padding: 10px 14px; flex: 1; min-width: 100px;
+    }
+    .case-stat .cs-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; font-weight: 700; color: var(--text); line-height: 1;
+      margin-bottom: 4px;
+    }
+    .case-stat .cs-label {
+      font-size: 0.68rem; color: var(--text3); text-transform: uppercase;
+      letter-spacing: 0.08em; font-weight: 600;
+    }
+    .case-tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+    .case-tool {
+      font-size: 0.68rem; font-weight: 600; color: var(--text3);
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+      padding: 3px 10px; border-radius: 50px;
+    }
+
+    /* ── PERSONAL NOTE ── */
+    .personal-section { text-align: center; }
+    .personal-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.3rem, 3vw, 1.9rem);
+      font-style: italic; line-height: 1.5;
+      color: var(--text2); max-width: 640px; margin: 0 auto 28px;
+    }
+    .personal-quote strong { color: var(--text); font-style: normal; font-weight: 600; }
+    .personal-divider {
+      width: 40px; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      border-radius: 2px; margin: 0 auto 20px;
+    }
+    .personal-name { font-size: 0.88rem; font-weight: 600; color: var(--text3); }
+
+    /* ── CONNECT ── */
+    .connect-section { text-align: center; background: var(--bg2); }
+    .connect-section .section-title { margin-bottom: 20px; }
+    .connect-section .section-sub { margin: 0 auto 40px; }
+    .connect-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .connect-card {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 16px 28px; text-decoration: none;
+      transition: all 0.25s; min-width: 200px;
+    }
+    .connect-card:hover { border-color: rgba(212,74,122,0.3); transform: translateY(-3px); }
+    .connect-card svg { width: 20px; height: 20px; stroke: var(--accent2); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .connect-card .cc-label { font-size: 0.72rem; color: var(--text3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+    .connect-card .cc-handle { font-size: 0.88rem; font-weight: 600; color: var(--text); margin-top: 2px; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center; padding: 40px 0;
+      border-top: 1px solid var(--border);
+      color: var(--text3); font-size: 0.78rem;
+    }
+
+    /* ── FADE ANIMATION ── */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-photo-frame img { height: 360px; }
+      .shift-grid { grid-template-columns: 1fr; gap: 32px; }
+      .pipeline { flex-direction: column; }
+      .pipe-stage { border-right: none; border-bottom: 1px solid var(--border); }
+      .pipe-stage:last-child { border-bottom: none; }
+      .engine-metrics { grid-template-columns: 1fr; }
+      .case-grid { grid-template-columns: 1fr; }
+      section { padding: 60px 0; }
+    }
+    @media (max-width: 500px) {
+      .container { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Background -->
+<div class="bg-grid"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+<div class="grain"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 1: HERO                     -->
+<!-- ═══════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- Left: Text -->
+      <div class="hero-text fade-up">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Open to Freelance Work
+        </div>
+
+        <h1>I used to send<br /><em>200 emails a day.</em><br />Manually.</h1>
+
+        <div class="hero-tagline">GTM Automation · Bengaluru, India</div>
+
+        <p class="hero-narrative">
+          Now my system sends <strong>50,000+ outreach messages a month</strong> without me touching a button. I've built GTM engines that generate <em>1,500 qualified leads per quarter</em> — and actually get replies. My name is <strong>Nishchith</strong>. I build the machines that make outreach feel effortless.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#engine" class="btn-primary">
+            See the engine
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#connect" class="btn-ghost">Let's talk</a>
+        </div>
+      </div>
+
+      <!-- Right: Photo -->
+      <div class="hero-photo-wrap fade-up" style="transition-delay:0.15s">
+        <div class="hero-photo-frame">
+          <img src="images/profile.jpg" alt="Nishchith U Shetty" />
+        </div>
+        <div class="photo-label">
+          <div class="pl-name">Nishchith U Shetty</div>
+          <div class="pl-role">GTM &amp; Automation Specialist</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 2: THE SHIFT (Narrative)    -->
+<!-- ═══════════════════════════════════ -->
+<section class="shift-section" id="story">
+  <div class="container">
+    <div class="section-num">01</div>
+    <div class="shift-grid">
+
+      <div class="fade-up">
+        <span class="section-label">The Shift</span>
+        <h2 class="section-title">How I stopped doing<br />what machines can do</h2>
+        <blockquote class="shift-quote">
+          "I don't send emails anymore.<br />I build systems that do."
+          <span>Nishchith, 2024</span>
+        </blockquote>
+        <p style="font-size:0.85rem;color:var(--text3);">Adaptive Marketing India · Jun 2023 – Present</p>
+      </div>
+
+      <div class="shift-right fade-up" style="transition-delay:0.1s">
+        <p>
+          In 2022, I was doing everything <strong>manually</strong>. Scraping leads one by one, sending emails one at a time, following up the same way. It worked — but it was exhausting, inconsistent, and completely <strong>unscalable</strong>.
+        </p>
+        <p>
+          Then I discovered automation. And everything changed.
+        </p>
+        <p>
+          I started building workflows with <strong>n8n, Clay, Instantly, and SuperAGI</strong> — connecting lead enrichment → multi-channel sequencing → AI-personalized outreach → follow-ups → reporting. What used to take a team of 5 now runs <strong>while I sleep</strong>.
+        </p>
+        <p>
+          Today, I help GTM teams replace chaos with precision. <strong>Every system I build has one job: make the next reply come easier.</strong>
+        </p>
+
+        <div class="highlight-box">
+          <div class="hb-label">What I believe</div>
+          <div class="hb-text">Great GTM systems aren't built manually — they're engineered through automation, experimentation, and empathy.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 3: THE ENGINE (Pipeline)    -->
+<!-- ═══════════════════════════════════ -->
+<section class="engine-section" id="engine">
+  <div class="container">
+    <div class="section-num">02</div>
+    <span class="section-label">The Engine</span>
+    <h2 class="section-title">From raw data to<br />qualified pipeline</h2>
+    <p class="section-sub">A simplified view of how a typical GTM pipeline I build flows — from ICP definition to paid conversion.</p>
+
+    <!-- Pipeline Visualization -->
+    <div class="pipeline fade-up">
+      <div class="pipe-stage">
+        <div class="pipe-icon">🎯</div>
+        <div class="pipe-stage-name">ICP Defined</div>
+        <div class="pipe-stage-val">10,000</div>
+        <div class="pipe-stage-sub">Potential contacts</div>
+        <span class="pipe-arrow">→</span>
+      </div>
+      <div class="pipe-stage">
+        <div class="pipe-icon">🔍</div>
+        <div class="pipe-stage-name">Enriched</div>
+        <div class="pipe-stage-val">5,000</div>
+        <div class="pipe-stage-sub">Via Clay, Lusha</div>
+        <span class="pipe-arrow">→</span>
+      </div>
+      <div class="pipe-stage">
+        <div class="pipe-icon">📧</div>
+        <div class="pipe-stage-name">Outreach Sent</div>
+        <div class="pipe-stage-val">4,200</div>
+        <div class="pipe-stage-sub">3-channel sequences</div>
+        <span class="pipe-arrow">→</span>
+      </div>
+      <div class="pipe-stage">
+        <div class="pipe-icon">💬</div>
+        <div class="pipe-stage-name">Replied</div>
+        <div class="pipe-stage-val">1,260</div>
+        <div class="pipe-stage-sub">30% reply rate</div>
+        <span class="pipe-arrow">→</span>
+      </div>
+      <div class="pipe-stage">
+        <div class="pipe-icon">💰</div>
+        <div class="pipe-stage-name">Qualified</div>
+        <div class="pipe-stage-val">378</div>
+        <div class="pipe-stage-sub">Booked calls / PQLs</div>
+        <span class="pipe-arrow">→</span>
+      </div>
+      <div class="pipe-stage" style="background: rgba(212,74,122,0.04);">
+        <div class="pipe-icon">🎉</div>
+        <div class="pipe-stage-name">Closed</div>
+        <div class="pipe-stage-val" style="color:var(--accent)">Paid</div>
+        <div class="pipe-stage-sub">Conversion tracked</div>
+      </div>
+    </div>
+
+    <!-- Engine Metrics -->
+    <div class="engine-metrics fade-up">
+      <div class="eng-metric">
+        <div class="em-val">1,500+</div>
+        <div class="em-desc">ICP-qualified leads generated every quarter — from a fully automated pipeline</div>
+        <div class="em-tag">Automated Pipeline</div>
+      </div>
+      <div class="eng-metric">
+        <div class="em-val">65–70%</div>
+        <div class="em-desc">Email open rates across all campaigns — 2x the industry average</div>
+        <div class="em-tag">2× Industry Avg</div>
+      </div>
+      <div class="eng-metric">
+        <div class="em-val">9%</div>
+        <div class="em-desc">Cold email → paid registration conversion on the PLF Hyderabad campaign</div>
+        <div class="em-tag">Conversion Rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 4: CASE STUDIES            -->
+<!-- ═══════════════════════════════════ -->
+<section class="cases-section" id="work">
+  <div class="container">
+    <div class="section-num">03</div>
+    <span class="section-label">Selected Work</span>
+    <h2 class="section-title">Campaigns that moved<br />the needle</h2>
+    <p class="section-sub">Two campaigns I'm most proud of — both run end-to-end by me, from strategy to execution to results.</p>
+
+    <div class="case-grid">
+
+      <div class="case-card fade-up">
+        <div class="case-eyebrow">Event Campaign · 2024</div>
+        <div class="case-title">PLF Hyderabad 2026 — Registrations from Scratch</div>
+        <p class="case-body">
+          Built the entire outbound engine for PLF Hyderabad from zero. Designed the multi-channel sequence, enriched the ICP list, ran 3-channel automated outreach (Email + LinkedIn + WhatsApp), and tracked everything end-to-end. Owned the entire pipeline solo.
+        </p>
+        <div class="case-stats">
+          <div class="case-stat">
+            <div class="cs-val">130</div>
+            <div class="cs-label">ICP Paid Fills</div>
+          </div>
+          <div class="case-stat">
+            <div class="cs-val">9%</div>
+            <div class="cs-label">Email → Paid</div>
+          </div>
+          <div class="case-stat">
+            <div class="cs-val">30–35%</div>
+            <div class="cs-label">Reply Rate</div>
+          </div>
+        </div>
+        <div class="case-tools">
+          <span class="case-tool">Clay</span>
+          <span class="case-tool">Instantly</span>
+          <span class="case-tool">SuperAGI</span>
+          <span class="case-tool">Wati</span>
+          <span class="case-tool">LinkedIn Sales Nav</span>
+        </div>
+      </div>
+
+      <div class="case-card fade-up" style="transition-delay:0.1s">
+        <div class="case-eyebrow">Infrastructure Build · 2023</div>
+        <div class="case-title">Cold Email Engine — 3 Domains, Zero Manual Work</div>
+        <p class="case-body">
+          Designed and deployed a multi-domain cold email infrastructure for a B2B client. Set up 3 sending domains with full warmup, integrated Instantly + Snov.io for lead discovery, and connected SuperAGI agents for AI-powered personalization at scale. The whole thing ran on autopilot.
+        </p>
+        <div class="case-stats">
+          <div class="case-stat">
+            <div class="cs-val">200+</div>
+            <div class="cs-label">Replies / Month</div>
+          </div>
+          <div class="case-stat">
+            <div class="cs-val">65%</div>
+            <div class="cs-label">Open Rate</div>
+          </div>
+          <div class="case-stat">
+            <div class="cs-val">3</div>
+            <div class="cs-label">Domains Active</div>
+          </div>
+        </div>
+        <div class="case-tools">
+          <span class="case-tool">Instantly</span>
+          <span class="case-tool">Snov.io</span>
+          <span class="case-tool">SuperAGI</span>
+          <span class="case-tool">n8n</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 5: PERSONAL NOTE           -->
+<!-- ═══════════════════════════════════ -->
+<section class="personal-section" id="note">
+  <div class="container fade-up">
+    <div class="section-num" style="text-align:center">04</div>
+    <span class="section-label">The Human Part</span>
+    <p class="personal-quote">
+      "I didn't come from a CS background. No coding bootcamp. No shortcuts. Just <strong>curiosity, obsession with systems</strong>, and a refusal to do manually what a machine can do better."
+    </p>
+    <div class="personal-divider"></div>
+    <div class="personal-name">Nishchith U Shetty · Bengaluru, India</div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 6: CONNECT                 -->
+<!-- ═══════════════════════════════════ -->
+<section class="connect-section" id="connect">
+  <div class="container">
+    <span class="section-label">Let's Connect</span>
+    <h2 class="section-title">Open to conversations</h2>
+    <p class="section-sub">
+      Freelance GTM projects, automation consulting, or just talking about outbound systems — I'm in.
+    </p>
+
+    <div class="connect-links fade-up">
+      <a href="https://linkedin.com/in/nischith-u-shetty" target="_blank" class="connect-card">
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <div>
+          <div class="cc-label">LinkedIn</div>
+          <div class="cc-handle">@nischith-u-shetty</div>
+        </div>
+      </a>
+      <a href="mailto:ushattynischith@gmail.com" class="connect-card">
+        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <div>
+          <div class="cc-label">Email</div>
+          <div class="cc-handle">ushattynischith@gmail.com</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>Built with precision · Nishchith U Shetty · Bengaluru, India · 2026</p>
+  </div>
+</footer>
+
+<!-- Scroll Animation -->
+<script>
+  const o = new IntersectionObserver(e => e.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => o.observe(el));
+</script>
+
+</body></html>
